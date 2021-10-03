@@ -2,9 +2,11 @@
 
 ## TL;DR
 
+* Install [Git](https://git-scm.com) (if you don't already have it)
+* Install [Python 3](https://www.python.org/downloads/) (if you don't already have it) 
 * Clone this repository to your local machine:
     ```sh
-    git clone git@github.com:comp0088/labs.git
+    git clone https://github.com/comp0088/labs.git
     ```
 * Create and activate a virtual environment:
     ```
@@ -52,9 +54,11 @@ In addition to the spec and script for each week, there are a few other files in
 
 ## Cloning & Updating
 
+In order to copy the repo you need to have a working installation of the Git version control system. If you don't already have this, you can [download it here](https://git-scm.com).
+
 Choose a convenient location for your working directory and download an initial copy of the repository with `git`:
 ```sh
-git clone git@github.com:comp0088/labs.git
+git clone https://github.com/comp0088/labs.git
 ```
 New lab exercises will be added to the repo each week. You can download updates with the following commands:
 ```sh
