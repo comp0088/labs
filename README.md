@@ -103,21 +103,27 @@ python3 -m venv .venv
 ```
 (The name `.venv` is a reasonably common convention that should be recognised by Python-aware editors such as VSCode and PyCharm, but you can use a different and more informative name if you wish. In that case, also replace `.venv` with your chosen name in the commands below.)
 
-**Make the virtual environment active**. The command for this varies depending on your operating system and shell.
+**Make the virtual environment active**. This mean it will be used for any python commands or scripts you execute in the current shell. Activation occurs only for the specific terminal window you do the activation in, and it ends when you close the window (or issue the comment `deactivate`). So you'll need to do this every time you open a new terminal that you want to run lab scripts from.
 
-On Unix-esque systems (Linux and MacOS), run:
+The command you use to activate the environment varies depending on your operating system and shell.
+
+On Unix-esque systems (Linux and MacOS) running a Bourne shell variant such as `bash` or `zsh` (this is usually the default), use:
 ```sh
 source .venv/bin/activate
 ```
-(If you are running a variant of the C-shell `csh` rather than `bash` or `zsh`, you should instead `source .venv/bin/activate.csh`.)
+(If you are instead running a variant of the C-shell, `csh` or `tcsh`, you should instead `source .venv/bin/activate.csh`.)
 
-On Windows, run:
+On Windows using the standard `CMD.EXE` terminal, use:
 ```sh
 .venv\Scripts\activate.bat
 ```
-(If you are running PowerShell, you should instead run `.venv\Scripts\Activate.ps1`)
+(If you are running PowerShell, you should instead run `.venv\Scripts\Activate.ps1`. However, note that the default Windows configuration for PowerShell [blocks script execution](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.1) as a security feature. You'll need to [bypass this](https://superuser.com/questions/106360/how-to-enable-execution-of-powershell-scripts) before being able to activate the virtual environment in PowerShell. It is possible that you may be using PowerShell without knowing it -- the Windows versions of both VSCode and PyCharm can use PowerShell as their terminal.)
 
-When the virtual environment is active, your commmand prompt will be modified with the prefix `[.venv]`.
+As a special case, if you are using the MINGW64 `bash` terminal that is installed by Git (among others) on Windows, then it is masquerading as a Unix environment but your virtual environment will have been set up with Windows naming conventions, so you need to use the following hybrid command:
+```sh
+source .venv/Scripts/activate
+```
+When the virtual environment is active, your commmand prompt will be modified with the prefix `(.venv)`.
 
 ### Installing Required Packages
 
