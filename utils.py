@@ -300,7 +300,7 @@ def plot_classification_map ( axes, classifier,
     
     fillmap = matplotlib.colors.ListedColormap(lights[:nclass])
     
-    axes.imshow(pred_y.T, origin='lower', extent=limits * 2, cmap=fillmap)
+    axes.imshow(pred_y.T, origin='lower', extent=limits * 2, cmap=fillmap, interpolation='none')
     
     if (X is not None) and (y is not None):
         for cc in np.unique(y):
