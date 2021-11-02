@@ -6,5 +6,5 @@ Scripts here provide example implementations for the exercises in the directory 
 
 ## Feedback
 
-Please post questions, comments, issues or bug reports to the [COMP0088 Moodle forum](https://moodle.ucl.ac.uk/mod/forum/view.php?id=3080410) or raise them with the TAs during your lab sessions.
+Please post questions, comments, issues or bug reports to the [COMP0088 Moodle forum](https://moodle.ucl.ac.uk/mod/hsuforum/view.php?id=3184621) or raise them with the TAs during your lab sessions.
 
