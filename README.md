@@ -81,9 +81,9 @@ git stash apply
 
 ## Python Setup
 
-The exercises require a local installation of Python 3, along with a number of additional packages for numerical programming, plotting and machine learning. We suggest using the latest stable release of Python (currently 3.9.7) from [python.org](https://www.python.org/downloads/). If you know and prefer [Anaconda](https://www.anaconda.com/products/individual-d)/[Miniconda](https://docs.conda.io/en/latest/miniconda.html) you are welcome to use that instead.
+The exercises require a local installation of Python 3, along with a number of additional packages for numerical programming, plotting and machine learning. We suggest using the latest stable release of Python 3.9 (currently 3.9.7) from [python.org](https://www.python.org/downloads/). (Python 3.10 has recently been released but many students have had issues with PyPI dependencies not yet being up to date, so install this version with caution.) If you know and prefer [Anaconda](https://www.anaconda.com/products/individual-d)/[Miniconda](https://docs.conda.io/en/latest/miniconda.html) you are welcome to use that instead -- the included `comp88.yml` will install most dependencies, but you will also need to install the appropriate version of PyTorch for your system. Use [this configuration selector](https://pytorch.org/get-started/locally/) to determine the command to run.
 
-(Although we recommend the latest Python, the code has also been tested on Python 3.6.8, which is the version currently installed on some of the CS lab machines. It is possible, albeit suboptimal, to set up and run the exercises on one of those machines via SSH.)
+(Although we recommend a more recent Python, the code has also been tested on Python 3.6.8, which is the version currently installed on some of the CS lab machines. It is possible, albeit suboptimal, to set up and run the exercises on one of those machines via SSH.)
 
 ### Virtual Environments
 
