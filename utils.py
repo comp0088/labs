@@ -312,3 +312,39 @@ def plot_classification_map ( axes, classifier,
     
     if legend_loc is not None:
         axes.legend(loc=legend_loc)
+    
+
+def plot_image(axes, image, title=''):
+    """
+    Convenience wrapper for the imshow settings we pretty much
+    *always* want when showing actual images.
+
+    # Arguments
+        axes: a Matplotlib Axes object into which to plot
+        image: an imshow-compatible Image or array to plot
+        title: title to add to the plot
+    """
+    if (len(image.shape) == 2) or image.shape[-1] == 1:
+        axes.imshow(image, cmap='Greys')
+    else:
+        axes.imshow(image)
+    
+    axes.set_xticklabels([])
+    axes.set_yticklabels([])
+    axes.set_xticks([])
+    axes.set_yticks([])
+    axes.set_title(title)
+    
+
+def torch_data_to_image_grid ( dataset, rows=5, cols=5, shuffle=False, rng=local_rng ):
+    """
+    Extract images from a torchvision dataset (with ToTensor transform)
+    and grid them an imshow-compatible array.
+    """
+    count = rows * cols
+    ix = rng.permutation(len(dataset))[:count] if shuffle else range(count)
+    
+    images = [ np.moveaxis(dataset[ii][0].numpy(), 0, 2) for ii in ix ]
+    
+    return np.concatenate( [ np.concatenate( images[start:(start + cols)], axis=1 ) for start in range(0, count, cols) ], axis=0 )
+    
