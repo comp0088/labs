@@ -29,6 +29,9 @@ from torch.utils.data import DataLoader, Subset
 from torchvision import datasets
 from torchvision.transforms import ToTensor
 
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
+
 import utils
 
 # these will be extracted from data anyway, but
