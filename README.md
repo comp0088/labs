@@ -15,7 +15,7 @@
     # On Unix/MacOS:
     source .venv/bin/activate
     # On Windows:
-    .venv\Scripts\activate.bat
+    .\.venv\Scripts\activate
     ```
 * Install Python package requirements:
     ```sh
