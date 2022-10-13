@@ -3,24 +3,49 @@
 ## TL;DR
 
 * Install [Git](https://git-scm.com) (if you don't already have it)
-* Install [Python 3](https://www.python.org/downloads/) (if you don't already have it) 
+* Install [Python 3](https://www.python.org/downloads/) (if you don't already have it - AVOID PYTHON 3.10) 
+* Download [Visual Studio Code](https://code.visualstudio.com/), an easy-to-use editor
 * Clone this repository to your local machine:
     ```sh
     git clone https://github.com/comp0088/labs.git
-    ```
+    ``` 
+* Open the cloned folder in Visual Studio Code: File > Open Folder > select the cloned repository folder
+* Open a new terminal in Visual Studio Code and make sure you are in the folder 'labs'
 * Create and activate a virtual environment:
     ```
     cd labs
-    python3 -m venv .venv
+    python3 -m venv venvcomp0088
     # On Unix/MacOS:
-    source .venv/bin/activate
+    source venvcomp0088/bin/activate
     # On Windows:
-    .\.venv\Scripts\activate
+    .\venvcomp0088\Scripts\activate
+    # Upgrade pip:
+    python -m pip install --upgrade pip
+    ```
+    If you get the error "python3 : The term 'python3' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the     name, or if a path was included, verify that the path is correct and try again", try using:
+    ```
+    python -m venv venvcomp0088
+    ```
+    If you are encountering issues, you can create a conda environment
+    ```
+    conda create -n venvcomp0088 python=3.9 -y
+    conda activate venvcomp0088
     ```
 * Install Python package requirements:
     ```sh
     pip install -r requirements.txt
     ```
+    In case packages are missing, you can just run
+    ```sh
+    pip install _package_
+    ```
+* On the bottom left of you VS Code window you sould see a "Select Interpreter" button:
+    * Click on the button
+    * Select "Enter interpreter path..."
+    * Select "Find..."
+    * Go to your virtual environment folder in "labs" > Scripts > python.exe > Select Interpreter
+    * Insted of "Select Interpreter" you should now see "3.x.x('venvcomp0088':venv)
+   
 * Read the week's lab exercises document `lab_N.pdf`
 * Add your code to the script `week_N.py`
 * Run the script from the command line to see your code in action:
