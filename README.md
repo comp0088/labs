@@ -44,7 +44,7 @@
     * Select "Enter interpreter path..."
     * Select "Find..."
         * Go to your virtual environment folder in "labs" > Scripts > python.exe > Select Interpreter (Windows) 
-        * Go to your virtual environment folder in "labs" > bin > python.exe > Select Interpreter (Unix/MacOS) 
+        * Go to your virtual environment folder in "labs" > bin > python.exe (or just python if you don't see the .exe extension)> Select Interpreter (Unix/MacOS) 
     * Insted of "Select Interpreter" you should now see "3.x.x('venvcomp0088':venv)
    
 * Read the week's lab exercises document `lab_N.pdf`
