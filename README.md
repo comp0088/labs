@@ -1,5 +1,9 @@
 # Lab exercises for COMP0088 Introduction to Machine Learning
 
+**WARNING: This repository is obsolete. Current COMP0088 students should use the lab exercises from the [colab](https://github.com/comp0088/colab) repo instead. These files are really only kept around for historical interest.**
+
+-------
+
 ## TL;DR
 
 * Install [Git](https://git-scm.com) (if you don't already have it)
